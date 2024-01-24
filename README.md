@@ -1,6 +1,6 @@
 # Food Origins
 
-A web application that helps users find food products based on food category and region of origin.
+A web application that helps users find food products based on category and region of origin.
 
 
 ## Description
