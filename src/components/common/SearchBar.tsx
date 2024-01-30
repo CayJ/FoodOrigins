@@ -12,7 +12,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ label }) => {
 			variant="outlined"
 			fullWidth
 			margin="normal"
-			style={{ marginBottom: '40px' }}
+			style={{ marginBottom: '35px' }}
 		/>
 	);
 }

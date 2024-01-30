@@ -19,7 +19,6 @@ const CategoryButton: React.FC<CategoryButtonProps> = ({ category }) => {
 				justifyContent: 'center',
 				alignItems: 'center',
 				fontSize: '18px',
-				marginBottom: '15px',
 				backgroundColor: bgColor,
 				'&:hover': {
 					backgroundColor: bgColor,
