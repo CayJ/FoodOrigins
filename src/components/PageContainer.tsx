@@ -15,7 +15,7 @@ const PageContainer: React.FC<PageContainerProps> = ({ children }) => {
           alignItems: "center",
           justifyContent: "center",
           minHeight: "100vh",
-          backgroundColor: "#e5e5e5",
+          backgroundColor: "#ffffff",
           px: 8,
         }}
       >
