@@ -9,6 +9,6 @@ test("renders starting screen", () => {
       <App />
     </MemoryRouter>,
   );
-  const linkElement = screen.getByText(/Select food category/i);
+  const linkElement = screen.getByText(/Select a food category/i);
   expect(linkElement).toBeInTheDocument();
 });
