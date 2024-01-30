@@ -11,9 +11,9 @@ export function SelectFoodCategory() {
         <PageContainer>
             <Box sx={{ width: '100%', maxWidth: 500, margin: 'auto' }}>
                 <Typography variant="h5" gutterBottom style={{ textAlign: 'center', marginBottom: '20px' }}>
-                    Select a Food Category
+                    Select a food category to discover
                 </Typography>
-                <SearchBar />
+                <SearchBar label={"Search food categories"} />
                 <CategoryGrid categories={categories} />
             </Box>
         </PageContainer>

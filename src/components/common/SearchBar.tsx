@@ -1,10 +1,14 @@
 import React from 'react';
 import { TextField } from '@mui/material';
 
-const SearchBar = () => {
+interface SearchBarProps {
+	label: string;
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({ label }) => {
 	return (
 		<TextField
-			label="Search Food Categories"
+			label={label}
 			variant="outlined"
 			fullWidth
 			margin="normal"
