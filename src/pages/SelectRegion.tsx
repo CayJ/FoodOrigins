@@ -8,12 +8,6 @@ import BackButton from "../components/common/BackButton";
 
 const SelectRegion = () => {
 	const { food_category, region } = useParams();
-
-
-	const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-
-	};
-
 	const isValidRegion = region && regions.includes(region);
 
 	if (isValidRegion) {
@@ -29,7 +23,6 @@ const SelectRegion = () => {
 				<Typography variant="h6" gutterBottom style={{ textAlign: 'center' }}>
 					{`Select a region for: ` }
 				</Typography>
-				<SearchBar label={"Search regions"} onChange={handleSearchChange} />
 				<BackButton label={"Back"} url={""} />
 			</Box>
 		</PageContainer>
