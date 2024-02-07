@@ -11,7 +11,7 @@ const SelectRegion = () => {
 
 
 	const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setSearchTerm(event.target.value);
+
 	};
 
 	const isValidRegion = region && regions.includes(region);
