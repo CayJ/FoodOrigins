@@ -2,10 +2,10 @@ import React from 'react';
 import { Button } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 
-interface CategoryButtonProps {
-	category: string;
+interface RegionButtonProps {
+	region: string;
 }
-const CategoryButton: React.FC<CategoryButtonProps> = ({ category }) => {
+const RegionButton: React.FC<RegionButtonProps> = ({ region }) => {
 	const navigate = useNavigate();
 
 
@@ -20,16 +20,16 @@ const CategoryButton: React.FC<CategoryButtonProps> = ({ category }) => {
 				alignItems: 'center',
 				fontSize: '18px',
 				color: '#FFFFFF',
-				backgroundColor: '#75a1b0',
+				backgroundColor: '#7e6b6b',
 				'&:hover': {
-					backgroundColor: '#82b1c0',
+					backgroundColor: '#8d7a7a',
 				}
 			}}
-			onClick={() => navigate(`${category}/`)}
+			onClick={() => navigate(`${region}/`)}
 		>
-			{category}
+			{region}
 		</Button>
 );
 }
 
-export default CategoryButton;
+export default RegionButton;
