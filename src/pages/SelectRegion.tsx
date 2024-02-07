@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import {Box, Typography} from '@mui/material';
 import PageContainer from "../components/PageContainer";
-import SearchBar from "../components/common/SearchBar";
 import { regions } from '../data/regions';
 import BackButton from "../components/common/BackButton";
 
