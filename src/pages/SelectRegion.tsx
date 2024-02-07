@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { useParams, useNavigate, Navigate } from 'react-router-dom';
+import React from 'react';
+import { useParams, Navigate } from 'react-router-dom';
 import {Box, Typography} from '@mui/material';
 import PageContainer from "../components/PageContainer";
 import SearchBar from "../components/common/SearchBar";
