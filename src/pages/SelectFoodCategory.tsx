@@ -3,20 +3,21 @@ import PageContainer from "../components/PageContainer";
 import { Typography, Box } from '@mui/material';
 import SearchBar from "../components/common/SearchBar";
 import CategoryGrid from "../components/common/CategoryGrid";
-import {foodCategories} from "../data/foodCategories";
+import foodCategories from "../data/foodCategories";
 
 export function SelectFoodCategory() {
     const [searchTerm, setSearchTerm] = useState('');
-    const [filteredCategories, setFilteredCategories] = useState(foodCategories);
+    const [filteredCategories, setFilteredCategories] = useState<string[]>([]);
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(event.target.value);
     };
 
     useEffect(() => {
-        const filtered = foodCategories.filter(category =>
-            category.toLowerCase().includes(searchTerm.toLowerCase())
-        );
+        const filtered = foodCategories.filter(c =>
+            c.category.toLowerCase().includes(searchTerm.toLowerCase())
+        ).map(c => c.category);
+
         setFilteredCategories(filtered);
     }, [searchTerm]);
 

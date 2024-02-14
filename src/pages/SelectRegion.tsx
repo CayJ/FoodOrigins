@@ -1,15 +1,32 @@
-import React from 'react';
-import { useParams, Navigate } from 'react-router-dom';
-import {Box, Typography} from '@mui/material';
+import React, {useEffect, useState} from 'react';
+import { useParams, useNavigate, Navigate } from 'react-router-dom';
+import {Box, Button, Typography} from '@mui/material';
 import PageContainer from "../components/PageContainer";
-import { regions } from '../data/regions';
+import SearchBar from "../components/common/SearchBar";
 import BackButton from "../components/common/BackButton";
+import RegionGrid from "../components/common/RegionGrid";
+import foodCategories from "../data/foodCategories";
 
 const SelectRegion = () => {
 	const { food_category, region } = useParams();
-	const isValidRegion = region && regions.includes(region);
+	const [filteredRegions, setFilteredRegions] = useState<string[]>([]);
+	const [searchTerm, setSearchTerm] = useState('');
+	const navigate = useNavigate();
 
-	if (isValidRegion) {
+	const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		setSearchTerm(event.target.value);
+	};
+
+	useEffect(() => {
+		const category = foodCategories.find(c => c.category === food_category);
+		const filtered = category?.regions.filter(r =>
+			r.toLowerCase().includes(searchTerm.toLowerCase())
+		) || [];
+
+		setFilteredRegions(filtered);
+	}, [food_category, searchTerm]);
+
+	if (region) {
 		return <Navigate to={`/${food_category}/${region}`} replace />;
 	}
 
@@ -20,9 +37,11 @@ const SelectRegion = () => {
 					Food Origins
 				</Typography>
 				<Typography variant="h6" gutterBottom style={{ textAlign: 'center' }}>
-					{`Select a region for: ` }
+					{`Select a region for: ${food_category}` }
 				</Typography>
-				<BackButton label={"Back"} url={""} />
+				<SearchBar label={"Search regions"} onChange={handleSearchChange} />
+				<RegionGrid regions={filteredRegions} />
+				<BackButton label={"Back"} url={"/"} />
 			</Box>
 		</PageContainer>
 	);

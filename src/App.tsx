@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import { SelectFoodCategory } from "./pages/SelectFoodCategory";
 import SelectRegion from "./pages/SelectRegion";
 
