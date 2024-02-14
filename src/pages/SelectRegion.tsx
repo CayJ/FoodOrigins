@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import { useParams, useNavigate, Navigate } from 'react-router-dom';
-import {Box, Button, Typography} from '@mui/material';
+import { useParams, Navigate } from 'react-router-dom';
+import {Box, Typography} from '@mui/material';
 import PageContainer from "../components/PageContainer";
 import SearchBar from "../components/common/SearchBar";
 import BackButton from "../components/common/BackButton";
@@ -11,7 +11,6 @@ const SelectRegion = () => {
 	const { food_category, region } = useParams();
 	const [filteredRegions, setFilteredRegions] = useState<string[]>([]);
 	const [searchTerm, setSearchTerm] = useState('');
-	const navigate = useNavigate();
 
 	const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setSearchTerm(event.target.value);
