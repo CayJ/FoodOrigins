@@ -1,20 +1,20 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import RegionButton from "./RegionButton";
+import FoodButton from "./FoodButton";
 
-interface RegionGridProps {
+interface FoodGridProps {
 	regions: string[];
 }
-const RegionGrid: React.FC<RegionGridProps> = ({ regions }) => {
+const FoodGrid: React.FC<FoodGridProps> = ({ regions }) => {
 	return (
 		<Grid container spacing={2.5} justifyContent="center">
 			{regions.map((region, index) => (
 				<Grid item key={index} xs={8} sm={5} md={3.25}>
-					<RegionButton region={region} />
+					<FoodButton region={region} />
 				</Grid>
 			))}
 		</Grid>
 	);
 }
 
-export default RegionGrid;
+export default FoodGrid;
