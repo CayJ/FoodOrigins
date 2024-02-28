@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/foodorigins/static/js/main.4ad1bcb7.js",
+    "main.js": "/foodorigins/static/js/main.5e434fec.js",
     "index.html": "/foodorigins/index.html",
-    "main.4ad1bcb7.js.map": "/foodorigins/static/js/main.4ad1bcb7.js.map"
+    "main.5e434fec.js.map": "/foodorigins/static/js/main.5e434fec.js.map"
   },
   "entrypoints": [
-    "static/js/main.4ad1bcb7.js"
+    "static/js/main.5e434fec.js"
   ]
 }
