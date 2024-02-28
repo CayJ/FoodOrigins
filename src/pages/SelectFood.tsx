@@ -1,19 +1,37 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
 import PageContainer from "../components/PageContainer";
 import SearchBar from "../components/common/SearchBar";
 import BackButton from "../components/common/BackButton";
 import FoodGrid from "../components/common/FoodGrid";
+import foodItems, {FoodItem} from "../data/foodItems";
 
 const SelectFood = () => {
 	const { food_category, region } = useParams();
+	const [items, setItems] = useState<FoodItem[]>([]);
+	const [searchTerm, setSearchTerm] = useState('');
+
+	useEffect(() => {
+		const categoryData = foodItems.find(c => c.category === food_category && c.region === region);
+		if (categoryData) {
+			setItems(categoryData.items);
+		}
+	}, [food_category, region]);
 
 	const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-
+		setSearchTerm(event.target.value.toLowerCase());
 	};
 
-	let filteredRegions = ["Food 1", "Food 2", "Food 3"];
+	useEffect(() => {
+		const categoryData = foodItems.find(c => c.category === food_category && c.region === region);
+		if (categoryData) {
+			const filteredItems = categoryData.items.filter(item =>
+				item.name.toLowerCase().includes(searchTerm)
+			);
+			setItems(filteredItems);
+		}
+	}, [searchTerm, food_category, region]);
 
 	return (
 		<PageContainer>
@@ -25,7 +43,7 @@ const SelectFood = () => {
 					{`${food_category} for ${region}:`}
 				</Typography>
 				<SearchBar label="Search food items" onChange={handleSearchChange} />
-				<FoodGrid regions={filteredRegions} />
+				<FoodGrid foodItems={items} />
 				<BackButton label="Back" url={`/${food_category}`} />
 			</Box>
 		</PageContainer>

@@ -1,11 +1,11 @@
 const foodCategories = [
 	{
 		category: "Coffee",
-		regions: ["North America", "South America", "Europe", "Asia", "Africa"],
+		regions: ["North America", "South America", "Europe", "Asia", "Africa", "Pacific"],
 	},
 	{
 		category: "Chocolate",
-		regions: ["Europe", "Asia", "South America", "Australia"],
+		regions: ["Europe", "Asia", "North America", "Australia"],
 	}
 ];
 

@@ -1,20 +1,21 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import FoodButton from "./FoodButton";
+import {FoodItem} from "../../data/foodItems";
 
 interface FoodGridProps {
-	regions: string[];
+	foodItems: FoodItem[]
 }
-const FoodGrid: React.FC<FoodGridProps> = ({ regions }) => {
+const FoodGrid: React.FC<FoodGridProps> = ({ foodItems }) => {
 	return (
 		<Grid container spacing={2.5} justifyContent="center">
-			{regions.map((region, index) => (
+			{foodItems.map((foodItem, index) => (
 				<Grid item key={index} xs={8} sm={5} md={3.25}>
-					<FoodButton region={region} />
+					<FoodButton foodItem={foodItem} />
 				</Grid>
 			))}
 		</Grid>
 	);
-}
+};
 
 export default FoodGrid;

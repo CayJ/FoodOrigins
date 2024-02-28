@@ -4,7 +4,6 @@ import { SelectFoodCategory } from "./pages/SelectFoodCategory";
 import SelectRegion from "./pages/SelectRegion";
 import SelectFood from "./pages/SelectFood";
 
-
 const App: React.FC = () => {
   return (
     <Routes>
