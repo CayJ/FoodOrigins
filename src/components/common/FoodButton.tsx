@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Typography } from '@mui/material';
-import { useNavigate } from "react-router-dom";
 import { FoodItem } from "../../data/foodItems";
 
 interface FoodButtonProps {
