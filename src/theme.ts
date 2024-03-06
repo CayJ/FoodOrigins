@@ -17,12 +17,19 @@ const theme = createTheme({
       paper: "#ffffff",
     },
     text: {
-      primary: "#333333", // primary text color
-      secondary: "#555555", // secondary text color
+      primary: "#2a2a2a",
+      secondary: "#474747",
     },
   },
   typography: {
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+    h4: {
+      fontWeight: 700,
+      color: "#3daede",
+    },
+    body1: {
+      color: "#2a2a2a",
+    },
   },
   components: {
     MuiCssBaseline: {
@@ -41,12 +48,12 @@ const theme = createTheme({
         },
         containedPrimary: {
           "&:hover": {
-            backgroundColor: "#86d770",
+            backgroundColor: "#5bc0de",
           },
         },
         containedSecondary: {
           "&:hover": {
-            backgroundColor: "#41982b",
+            backgroundColor: "#b7e391",
           },
         },
       },

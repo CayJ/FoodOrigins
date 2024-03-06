@@ -6,6 +6,7 @@ import SearchBar from "../components/common/SearchBar";
 import BackButton from "../components/common/BackButton";
 import FoodGrid from "../components/common/FoodGrid";
 import foodItems, {FoodItem} from "../data/foodItems";
+import Logo from "../components/common/Logo";
 
 const SelectFood = () => {
 	const { food_category, region } = useParams();
@@ -35,10 +36,8 @@ const SelectFood = () => {
 
 	return (
 		<PageContainer>
-			<Box sx={{ width: '100%', maxWidth: 500, margin: 'auto' }}>
-				<Typography variant="h4" gutterBottom style={{ color:"#4c9ab2", textAlign: 'center', marginBottom: '30px' }}>
-					Food Origins
-				</Typography>
+			<Box sx={{ width: '100%', maxWidth: '800px', margin: 'auto', padding: '20px' }}>
+				<Logo />
 				<Typography variant="h6" gutterBottom style={{ textAlign: 'center', marginBottom: '20px' }}>
 					{`${food_category} for ${region}:`}
 				</Typography>

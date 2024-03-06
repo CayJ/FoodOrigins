@@ -4,6 +4,7 @@ import { Typography, Box } from '@mui/material';
 import SearchBar from "../components/common/SearchBar";
 import CategoryGrid from "../components/common/CategoryGrid";
 import foodItems from "../data/foodItems";
+import Logo from "../components/common/Logo";
 
 export function SelectFoodCategory() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -25,11 +26,9 @@ export function SelectFoodCategory() {
 
     return (
         <PageContainer>
-            <Box sx={{ width: '100%', maxWidth: 500, margin: 'auto' }}>
-                <Typography variant="h5" gutterBottom style={{ color:"#4c9ab2", textAlign: 'center', marginBottom: '30px' }}>
-                    Food Origins
-                </Typography>
-                <Typography variant="h6" gutterBottom style={{ textAlign: 'center' }}>
+            <Box sx={{ width: '100%', maxWidth: '800px', margin: 'auto', padding: '20px' }}>
+                <Logo />
+                <Typography variant="h6" gutterBottom style={{ textAlign: 'center', marginBottom: '20px' }}>
                     Select a food category to discover
                 </Typography>
                 <SearchBar label={"Search food categories"} onChange={handleSearchChange} />

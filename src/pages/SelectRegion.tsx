@@ -6,6 +6,7 @@ import SearchBar from "../components/common/SearchBar";
 import BackButton from "../components/common/BackButton";
 import RegionGrid from "../components/common/RegionGrid";
 import foodItems from "../data/foodItems";
+import Logo from "../components/common/Logo";
 
 const SelectRegion = () => {
 	const { food_category } = useParams();
@@ -32,14 +33,12 @@ const SelectRegion = () => {
 
 	return (
 		<PageContainer>
-			<Box sx={{ width: '100%', maxWidth: 500, margin: 'auto' }}>
-				<Typography variant="h5" gutterBottom style={{ color: "#4c9ab2", textAlign: 'center', marginBottom: '30px' }}>
-					Food Origins
+			<Box sx={{ width: '100%', maxWidth: '800px', margin: 'auto', padding: '20px' }}>
+				<Logo />
+				<Typography variant="h6" gutterBottom style={{ textAlign: 'center', marginBottom: '20px' }}>
+					Select a region for: {food_category}
 				</Typography>
-				<Typography variant="h6" gutterBottom style={{ textAlign: 'center' }}>
-					{`Select a region for: ${food_category}`}
-				</Typography>
-				<SearchBar label={"Search regions"} onChange={handleSearchChange} />
+				<SearchBar label="Search regions" onChange={handleSearchChange} />
 				<RegionGrid regions={filteredRegions} />
 				<BackButton label={"Back"} url={"/"} />
 			</Box>

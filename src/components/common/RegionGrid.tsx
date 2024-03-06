@@ -7,9 +7,9 @@ interface RegionGridProps {
 }
 const RegionGrid: React.FC<RegionGridProps> = ({ regions }) => {
 	return (
-		<Grid container spacing={2.5} justifyContent="center">
+		<Grid container spacing={3} justifyContent="center">
 			{regions.map((region, index) => (
-				<Grid item key={index} xs={8} sm={5} md={3.25}>
+				<Grid item key={index} xs={12} sm={6} md={4} lg={3}>
 					<RegionButton region={region} />
 				</Grid>
 			))}

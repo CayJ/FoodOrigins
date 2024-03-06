@@ -21,7 +21,6 @@ const FoodButton: React.FC<FoodButtonProps> = ({ foodItem }) => {
 				fontSize: '1rem',
 				color: '#FFFFFF',
 				backgroundColor: '#77a29b',
-				textTransform: 'none',
 				'&:hover': {
 					backgroundColor: '#8bb7ab',
 					transform: 'translateY(-3px)',

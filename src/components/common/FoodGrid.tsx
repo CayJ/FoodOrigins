@@ -8,9 +8,9 @@ interface FoodGridProps {
 }
 const FoodGrid: React.FC<FoodGridProps> = ({ foodItems }) => {
 	return (
-		<Grid container spacing={2.5} justifyContent="center">
+		<Grid container spacing={3} justifyContent="center">
 			{foodItems.map((foodItem, index) => (
-				<Grid item key={index} xs={8} sm={5} md={3.25}>
+				<Grid item key={index} xs={12} sm={6} md={4} lg={3}>
 					<FoodButton foodItem={foodItem} />
 				</Grid>
 			))}

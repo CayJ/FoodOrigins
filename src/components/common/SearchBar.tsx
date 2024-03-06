@@ -1,20 +1,40 @@
 import React from 'react';
-import { TextField } from '@mui/material';
+import { TextField, styled } from '@mui/material';
 
 interface SearchBarProps {
 	label: string;
 	onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
+const FoodTextField = styled(TextField)({
+	'& label.Mui-focused': {
+		color: '#3daede',
+	},
+	'& .MuiOutlinedInput-root': {
+		'&.Mui-focused fieldset': {
+			borderColor: '#3daede',
+		},
+		'& fieldset': {
+			borderRadius: '8px',
+			boxShadow: '0px 3px 6px rgba(0,0,0,0.1)',
+		},
+		'&:hover fieldset': {
+			borderColor: '#67c5ee',
+		},
+	},
+});
+
 const SearchBar: React.FC<SearchBarProps> = ({ label, onChange }) => {
 	return (
-		<TextField
+		<FoodTextField
 			label={label}
 			onChange={onChange}
 			variant="outlined"
 			fullWidth
 			margin="normal"
-			style={{ marginBottom: '35px' }}
+			sx={{
+				marginBottom: '35px',
+			}}
 		/>
 	);
 }

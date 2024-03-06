@@ -35,6 +35,14 @@ const foodItems = [
 	},
 	{
 		category: "Fruit",
+		region: "North America",
+		items: [
+			{ name: "Orange", description: "Citrus fruit from around the continent" },
+			{ name: "Banana", description: "Fruit from various regions of the United States" },
+		],
+	},
+	{
+		category: "Fruit",
 		region: "Asia",
 		items: [
 			{ name: "Lychee", description: "Fruit from various regions of Asia" },
@@ -47,6 +55,8 @@ const foodItems = [
 		region: "Asia",
 		items: [
 			{ name: "Trung Nguyen", description: "Coffee from Vietnam" },
+			{ name: "UCC Ueshima Coffee Co", description: "Coffee from Japan" },
+			{ name: "Komeda Coffee", description: "Coffee from Japan" },
 		],
 	},
 ];
