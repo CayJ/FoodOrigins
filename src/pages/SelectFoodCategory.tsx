@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import PageContainer from "../components/PageContainer";
 import { Typography, Box } from '@mui/material';
 import SearchBar from "../components/common/SearchBar";
 import CategoryGrid from "../components/common/CategoryGrid";
-import foodCategories from "../data/foodCategories";
+import foodItems from "../data/foodItems";
 
 export function SelectFoodCategory() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -14,9 +14,11 @@ export function SelectFoodCategory() {
     };
 
     useEffect(() => {
-        const filtered = foodCategories.filter(c =>
-            c.category.toLowerCase().includes(searchTerm.toLowerCase())
-        ).map(c => c.category);
+        const categories = Array.from(new Set(foodItems.map(item => item.category)));
+
+        const filtered = categories.filter(category =>
+            category.toLowerCase().includes(searchTerm.toLowerCase())
+        );
 
         setFilteredCategories(filtered);
     }, [searchTerm]);

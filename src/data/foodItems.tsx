@@ -33,6 +33,22 @@ const foodItems = [
 			{ name: "Hawaii Espresso", description: "Coffee from Hawaii" },
 		],
 	},
+	{
+		category: "Fruit",
+		region: "Asia",
+		items: [
+			{ name: "Lychee", description: "Fruit from various regions of Asia" },
+			{ name: "Coconut", description: "Fruit from various regions of Asia" },
+			{ name: "Jackfruit", description: "Fruit from various regions of Asia" },
+		],
+	},
+	{
+		category: "Coffee",
+		region: "Asia",
+		items: [
+			{ name: "Trung Nguyen", description: "Coffee from Vietnam" },
+		],
+	},
 ];
 
 export default foodItems;
