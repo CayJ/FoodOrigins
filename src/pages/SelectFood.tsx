@@ -28,7 +28,8 @@ const SelectFood = () => {
 		const categoryData = foodItems.find(c => c.category === food_category && c.region === region);
 		if (categoryData) {
 			const filteredItems = categoryData.items.filter(item =>
-				item.name.toLowerCase().includes(searchTerm)
+				item.name.toLowerCase().includes(searchTerm) ||
+				item.description.toLowerCase().includes(searchTerm.toLowerCase())
 			);
 			setItems(filteredItems);
 		}
