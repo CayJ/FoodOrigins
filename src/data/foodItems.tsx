@@ -100,7 +100,6 @@ const foodItems = [
 			{ name: "Lychee", description: "Fruit from various regions of Asia" },
 			{ name: "Coconut", description: "Fruit from various regions of Asia" },
 			{ name: "Jackfruit", description: "Fruit from various regions of Asia" },
-			{ name: "Lychee", description: "Fruit from various regions of Asia" },
 			{ name: "Durian", description: "Fruit from various regions of Asia" },
 			{ name: "Dragon fruit", description: "Fruit from various regions of Asia" },
 			{ name: "Mango", description: "Fruit from various regions of Asia" },

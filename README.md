@@ -13,6 +13,7 @@ category of food. The goal of Food Origins is to make it easier for users to fin
 
 ### Dependencies
 
+* Node.js
 * React
 * Redux
 * Redux Toolkit
